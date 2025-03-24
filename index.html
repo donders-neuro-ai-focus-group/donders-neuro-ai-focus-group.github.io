@@ -150,6 +150,7 @@
       padding: 15px;
       margin-bottom: 20px;
       border-radius: 4px;
+      text-align: center;
     }
     
     @media (max-width: 768px) {
@@ -254,7 +255,7 @@
       </div>
       
       <!-- Netlify Form -->
-      <form name="neuro-ai-signup" method="POST" data-netlify="true" action="/thank-you" netlify-honeypot="bot-field">
+      <form name="neuro-ai-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="signup-form">
         <!-- Hidden field to prevent spam -->
         <p style="display: none;">
           <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -317,12 +318,39 @@
 
   <!-- JavaScript for handling form submission -->
   <script>
-    // Check if the URL contains a success parameter
     document.addEventListener('DOMContentLoaded', function() {
-      if (window.location.search.includes('success=true')) {
+      // Handle form submission
+      const form = document.getElementById('signup-form');
+      
+      form.addEventListener('submit', function(event) {
+        // Let Netlify handle the form submission
+        // This script just manages UI feedback without redirecting
+        
+        // Show success message after the form is processed by Netlify
+        // This happens after the automatic Netlify page reload
+        if (window.location.search.includes('success=true') || 
+            window.location.search.includes('submission-ok')) {
+          showSuccessMessage();
+        }
+      });
+      
+      // Check URL for success parameters when page loads
+      if (window.location.search.includes('success=true') || 
+          window.location.search.includes('submission-ok')) {
+        showSuccessMessage();
+      }
+      
+      function showSuccessMessage() {
+        // Show success message
         document.getElementById('success-message').style.display = 'block';
-        // Scroll to the message
-        document.getElementById('success-message').scrollIntoView();
+        
+        // Scroll to success message
+        document.getElementById('success-message').scrollIntoView({
+          behavior: 'smooth'
+        });
+        
+        // Clear form
+        form.reset();
       }
     });
   </script>
