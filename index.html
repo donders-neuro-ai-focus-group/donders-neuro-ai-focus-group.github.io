@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+  <!-- Head content remains the same -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Donders Neuro-AI Focus Group</title>
   <meta name="author" content="Donders Institute">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS styles remain the same -->
   <style>
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -15,6 +17,7 @@
       line-height: 1.6;
     }
     
+    /* Other styles remain the same */
     a {
       color: #0366d6;
       text-decoration: none;
@@ -141,6 +144,26 @@
       font-size: 14px;
     }
     
+    /* Added styles for form success/error messages */
+    .form-message {
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      display: none;
+    }
+    
+    .form-success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .form-error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    
     @media (max-width: 768px) {
       .member {
         width: 100%;
@@ -151,6 +174,7 @@
 
 <body>
   <div class="container">
+    <!-- Header and navigation remain the same -->
     <div class="header">
       <h1>Donders Neuro-AI Focus Group</h1>
       <p>Bridging neuroscience and artificial intelligence research at the Donders Institute</p>
@@ -164,6 +188,7 @@
       <a href="#signup">Sign Up</a>
     </div>
     
+    <!-- About section remains the same -->
     <div id="about" class="section">
       <div class="heading">About</div>
       <p>
@@ -171,6 +196,7 @@
       </p>
     </div>
     
+    <!-- News section remains the same -->
     <div id="news" class="section">
       <div class="heading">News</div>
       
@@ -183,6 +209,7 @@
       </div>
     </div>
     
+    <!-- Schedule section remains the same -->
     <div id="schedule" class="section">
       <div class="heading">Schedule</div>
       <div class="schedule-item">
@@ -194,6 +221,7 @@
       </div>
     </div>
     
+    <!-- Members section remains the same -->
     <div id="members" class="section">
       <div class="heading">Organizers</div>
       
@@ -230,27 +258,43 @@
       </div>
     </div>
     
+    <!-- Updated sign-up section with email functionality -->
     <div id="signup" class="section">
       <div class="heading">Sign Up for the Focus Group</div>
       
       <p>
-        Interested in joining our Neuro-AI Focus Group? Fill out the form below to express your interest. We welcome researchers, students, and staff from the Donders Institute and affiliated institutions.
+        Interested in joining our Neuro-AI Focus Group? Fill out the form below to express your interest and receive the latest updates. We welcome researchers from the Donders Institute and affiliated institutions.
       </p>
       
-      <form>
+      <!-- Success and error messages -->
+      <div id="formSuccess" class="form-message form-success">
+        Thank you for your interest! Your application has been submitted successfully.
+      </div>
+      <div id="formError" class="form-message form-error">
+        There was an error submitting your application. Please try again later or contact us directly.
+      </div>
+      
+      <!-- Updated form with action and method attributes -->
+      <form id="signupForm" action="https://formsubmit.co/tianai.dong@mpi.nl" method="POST">
+        <!-- Hidden fields for FormSubmit configuration -->
+        <input type="hidden" name="_subject" value="New Neuro-AI Focus Group Signup">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+        
         <div class="form-group">
           <label for="name">Full Name *</label>
-          <input type="text" id="name" required>
+          <input type="text" id="name" name="name" required>
         </div>
         
         <div class="form-group">
           <label for="email">Email Address *</label>
-          <input type="email" id="email" required>
+          <input type="email" id="email" name="email" required>
         </div>
         
         <div class="form-group">
           <label for="position">Position *</label>
-          <select id="position" required>
+          <select id="position" name="position" required>
             <option value="">Select your position</option>
             <option value="faculty">Faculty Member</option>
             <option value="postdoc">Postdoctoral Researcher</option>
@@ -263,19 +307,19 @@
         
         <div class="form-group">
           <label for="department">Department/Institute *</label>
-          <input type="text" id="department" required>
+          <input type="text" id="department" name="department" required>
         </div>
-        
         
         <div class="form-group">
           <label for="suggestions">Suggestions for Activities or Topics</label>
-          <textarea id="suggestions" rows="4"></textarea>
+          <textarea id="suggestions" name="suggestions" rows="4"></textarea>
         </div>
         
         <button type="submit">Submit Application</button>
       </form>
     </div>
     
+    <!-- Footer remains the same -->
     <div class="footer">
       <p>
         Donders Institute for Brain, Cognition and Behaviour<br>
@@ -283,12 +327,29 @@
         Nijmegen, The Netherlands
       </p>
       <p>
-        For inquiries: <a href="tianai.dong@mpi.nl">tianai.dong@mpi.nl</a>
+        For inquiries: <a href="mailto:tianai.dong@mpi.nl">tianai.dong@mpi.nl</a>
       </p>
       <p>
         Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>
       </p>
     </div>
   </div>
+
+  <!-- JavaScript for form handling -->
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      // The form will be handled by FormSubmit.co
+      // This JavaScript is just for additional validation if needed
+      
+      // You could add custom validation here if needed
+      
+      // For example, to display a success message before redirecting
+      // event.preventDefault();
+      // document.getElementById('formSuccess').style.display = 'block';
+      // setTimeout(() => {
+      //   this.submit();
+      // }, 2000);
+    });
+  </script>
 </body>
 </html>
