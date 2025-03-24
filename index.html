@@ -254,24 +254,15 @@
         Thank you for your interest in the Neuro-AI Focus Group! Your application has been received, and we'll be in touch soon.
       </div>
       
-      <!-- Netlify Form -->
-      <!-- This is a static form pre-render for Netlify to detect -->
-      <form name="neuro-ai-signup" netlify netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <select name="position"></select>
-        <input type="text" name="department" />
-        <textarea name="suggestions"></textarea>
-      </form>
-      
-      <!-- Actual form that users will interact with -->
-      <form name="neuro-ai-signup" method="POST" id="signup-form">
-        <input type="hidden" name="form-name" value="neuro-ai-signup" />
-        
-        <!-- Hidden field to prevent spam -->
-        <p style="display: none;">
-          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-        </p>
+      <!-- Form using FormSubmit.co -->
+      <!-- Replace YOUR_EMAIL@gmail.com with your actual Gmail address -->
+      <form action="https://formsubmit.co/tianai.dong@mpi.nl" method="POST" id="signup-form">
+        <!-- Optional FormSubmit.co settings -->
+        <input type="hidden" name="_subject" value="New Neuro-AI Focus Group Signup">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://donders-neuro-ai-focus-group.github.io/?submitted=true">
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_honey" style="display: none">
         
         <div class="form-group">
           <label for="name">Full Name *</label>
@@ -328,20 +319,9 @@
   <!-- JavaScript for handling form submission -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Get form reference
-      const form = document.getElementById('signup-form');
-      
-      // Handle form submission
-      form.addEventListener('submit', function(e) {
-        // Let the form submit normally - Netlify will handle it
-        
-        // After successful submission, Netlify might redirect back with a query parameter
-        // The script below checks for that and displays success message
-      });
-      
-      // Check if this is a redirect back from Netlify form submission
+      // Check if this is a redirect back after submission
       const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has('form-name')) {
+      if (urlParams.has('submitted') || urlParams.get('submitted') === 'true') {
         // Show success message
         document.getElementById('success-message').style.display = 'block';
         
@@ -349,9 +329,6 @@
         document.getElementById('success-message').scrollIntoView({
           behavior: 'smooth'
         });
-        
-        // Clear form
-        form.reset();
       }
     });
   </script>
