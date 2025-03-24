@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Thank You - Donders Neuro-AI Focus Group</title>
+  <title>Join the Donders Neuro-AI Focus Group</title>
   <meta name="author" content="Donders Institute">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -35,7 +35,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
     }
     
     .header {
@@ -46,7 +45,7 @@
       width: 100%;
     }
     
-    .thank-you-card {
+    .form-card {
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -56,22 +55,35 @@
       width: 100%;
     }
     
-    .thank-you-icon {
-      color: #28a745;
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    
-    .thank-you-title {
-      font-size: 28px;
+    .form-title {
+      font-size: 24px;
       font-weight: 600;
       margin-bottom: 20px;
-      color: #28a745;
+      color: #0366d6;
+      text-align: center;
     }
     
-    .thank-you-message {
-      font-size: 18px;
-      margin-bottom: 30px;
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    .required:after {
+      content: " *";
+      color: #e32;
     }
     
     .button {
@@ -84,12 +96,10 @@
       font-size: 16px;
       font-weight: 500;
       display: inline-block;
-      margin-top: 20px;
     }
     
     .button:hover {
       background-color: #0256b9;
-      text-decoration: none;
     }
     
     .footer {
@@ -111,13 +121,44 @@
       <p>Bridging neuroscience and artificial intelligence research at the Donders Institute</p>
     </div>
     
-    <div class="thank-you-card">
-      <div class="thank-you-icon">✓</div>
-      <div class="thank-you-title">Thank You for Signing Up!</div>
-      <div class="thank-you-message">
-        We've added your email to our Neuro-AI focus group mailing list and will keep you updated on upcoming events and activities :)
-      </div>
-      <a href="index.html" class="button">Return to Homepage</a>
+    <div class="form-card">
+      <div class="form-title">Join Our Mailing List</div>
+      
+      <!-- FormSubmit Implementation -->
+      <form action="https://formsubmit.co/tianai.dong@mpi.nl" method="POST">
+        <!-- FormSubmit Configuration -->
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+        <input type="hidden" name="_subject" value="New Neuro-AI Focus Group Signup">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        
+        <div class="form-group">
+          <label for="name" class="required">Name</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email" class="required">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="affiliation">Affiliation</label>
+          <input type="text" name="affiliation" id="affiliation">
+        </div>
+        
+        <div class="form-group">
+          <label for="research_interests">Research Interests</label>
+          <textarea name="research_interests" id="research_interests" rows="3"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="how_heard">How did you hear about us?</label>
+          <input type="text" name="how_heard" id="how_heard">
+        </div>
+        
+        <button type="submit" class="button">Subscribe</button>
+      </form>
     </div>
     
     <div class="footer">
