@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Join the Donders Neuro-AI Focus Group</title>
+  <title>Donders Neuro-AI Focus Group</title>
   <meta name="author" content="Donders Institute">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -30,11 +30,6 @@
       margin-right: auto;
       margin-left: auto;
       padding: 20px;
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
     
     .header {
@@ -42,25 +37,46 @@
       margin-bottom: 30px;
       padding-bottom: 20px;
       border-bottom: 1px solid #eaecef;
-      width: 100%;
     }
     
-    .form-card {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 40px;
-      margin: 20px 0;
-      max-width: 600px;
-      width: 100%;
+    .nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
     }
     
-    .form-title {
+    .nav a {
+      margin: 0 15px;
+      font-weight: 500;
+    }
+    
+    .section {
+      margin-bottom: 40px;
+    }
+    
+    .heading {
       font-size: 24px;
       font-weight: 600;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 10px;
       margin-bottom: 20px;
-      color: #0366d6;
-      text-align: center;
+    }
+    
+    .news-item, .schedule-item {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eaecef;
+    }
+    
+    .news-date, .schedule-date {
+      color: #6a737d;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    
+    .news-title, .schedule-title {
+      font-weight: 600;
+      margin-bottom: 5px;
     }
     
     .form-group {
@@ -73,7 +89,7 @@
       font-weight: 500;
     }
     
-    input, textarea {
+    input, textarea, select {
       width: 100%;
       padding: 10px;
       border: 1px solid #ddd;
@@ -81,24 +97,18 @@
       font-size: 16px;
     }
     
-    .required:after {
-      content: " *";
-      color: #e32;
-    }
-    
-    .button {
+    button {
       background-color: #0366d6;
       color: white;
       border: none;
-      padding: 12px 24px;
+      padding: 12px 20px;
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
       font-weight: 500;
-      display: inline-block;
     }
     
-    .button:hover {
+    button:hover {
       background-color: #0256b9;
     }
     
@@ -109,7 +119,32 @@
       margin-top: 50px;
       padding-top: 20px;
       border-top: 1px solid #eaecef;
-      width: 100%;
+    }
+    
+    .members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .member {
+      width: 48%;
+      margin-bottom: 25px;
+    }
+    
+    .member-name {
+      font-weight: 600;
+    }
+    
+    .member-role {
+      color: #6a737d;
+      font-size: 14px;
+    }
+    
+    @media (max-width: 768px) {
+      .member {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -121,43 +156,123 @@
       <p>Bridging neuroscience and artificial intelligence research at the Donders Institute</p>
     </div>
     
-    <div class="form-card">
-      <div class="form-title">Join Our Mailing List</div>
+    <div class="nav">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#members">Members</a>
+      <a href="#signup">Sign Up</a>
+    </div>
+    
+    <div id="about" class="section">
+      <div class="heading">About</div>
+      <p>
+        Both neuroscience and AI study how intelligent systems perceive, make decisions, communicate, and act in the world. Despite rapid developments in both fields, critical questions remain at their intersection: How can AI enhance neuroscientific inquiry, and how can neuroscience insights advance AI development? Our proposed focus group aims to bridge this gap by bringing together researchers to address these interdisciplinary challenges. We invite all Donderians—across disciplines such as neuroscience, cognitive science, machine learning, and research areas like vision, language, learning and decision-making —to participate in the focus group through regular meetings. Together, we aim to cultivate a vibrant neuro-AI local community at Donders, one that transcends institutional boundaries and fosters new research collaborations.
+      </p>
+    </div>
+    
+    <div id="news" class="section">
+      <div class="heading">News</div>
       
-      <!-- FormSubmit Implementation -->
-      <form action="https://formsubmit.co/tianai.dong@mpi.nl" method="POST">
-        <!-- FormSubmit Configuration -->
-        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-        <input type="hidden" name="_subject" value="New Neuro-AI Focus Group Signup">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+      <div class="news-item">
+        <div class="news-date">Feb 28, 2025</div>
+        <div class="news-title">Our focus Group has been successfully selected for a research stimulation fund!!</div>
+        <p>
+          Registration is now open!
+        </p>
+      </div>
+    </div>
+    
+    <div id="schedule" class="section">
+      <div class="heading">Schedule</div>
+      <div class="schedule-item">
+        <div class="schedule-date"> (Tenative) May, 2025 | Monday | MM 01.620 </div>
+        <div class="schedule-title">Kick-off Meeting</div>
+        <p>
+          Details come soon!
+        </p>
+      </div>
+    </div>
+    
+    <div id="members" class="section">
+      <div class="heading">Organizers</div>
+      
+      <div class="members">
+        <div class="member">
+        <a href="https://www.predictivebrainlab.com/people/floris-de-lange/">Floris de Lange</a>
+          <div class="member-role">PI </div>
+        </div>
         
+        <div class="member">
+        <a href="https://www.dynac-lab.com/people">Linda Geerligs</a>
+          <div class="member-role">PI</div>
+        </div>
+        
+        <div class="member">
+        <a href="https://cls.ru.nl/~sfrank/">Stefan Frank</a>
+          <div class="member-role">PI</div>
+        </div>
+        
+        <div class="member">
+          <a href="https://www.artcogsys.com/team/marcel/">Marcel van Gerven</a>
+          <div class="member-role">PI</div>
+        </div>
+        
+        <div class="member">
+          <a href="https://thirzadado.com//">Thirza Dado</a>
+          <div class="member-role">Postdoc</div>
+        </div>
+        
+        <div class="member">
+          <a href="https://tianaidong.github.io/">Dota Tianai Dong</a>
+          <div class="member-role">PhD Student</div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="signup" class="section">
+      <div class="heading">Sign Up for the Focus Group</div>
+      
+      <p>
+        Interested in joining our Neuro-AI Focus Group? Fill out the form below to express your interest. We welcome researchers, students, and staff from the Donders Institute and affiliated institutions.
+      </p>
+      
+      <form>
         <div class="form-group">
-          <label for="name" class="required">Name</label>
-          <input type="text" name="name" id="name" required>
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" required>
         </div>
         
         <div class="form-group">
-          <label for="email" class="required">Email</label>
-          <input type="email" name="email" id="email" required>
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" required>
         </div>
         
         <div class="form-group">
-          <label for="affiliation">Affiliation</label>
-          <input type="text" name="affiliation" id="affiliation">
+          <label for="position">Position *</label>
+          <select id="position" required>
+            <option value="">Select your position</option>
+            <option value="faculty">Faculty Member</option>
+            <option value="postdoc">Postdoctoral Researcher</option>
+            <option value="phd">PhD Student</option>
+            <option value="master">Master's Student</option>
+            <option value="staff">Staff</option>
+            <option value="other">Other</option>
+          </select>
         </div>
         
         <div class="form-group">
-          <label for="research_interests">Research Interests</label>
-          <textarea name="research_interests" id="research_interests" rows="3"></textarea>
+          <label for="department">Department/Institute *</label>
+          <input type="text" id="department" required>
         </div>
+        
         
         <div class="form-group">
-          <label for="how_heard">How did you hear about us?</label>
-          <input type="text" name="how_heard" id="how_heard">
+          <label for="suggestions">Suggestions for Activities or Topics</label>
+          <textarea id="suggestions" rows="4"></textarea>
         </div>
         
-        <button type="submit" class="button">Subscribe</button>
+        <button type="submit">Submit Application</button>
       </form>
     </div>
     
@@ -168,7 +283,10 @@
         Nijmegen, The Netherlands
       </p>
       <p>
-        For inquiries: <a href="mailto:tianai.dong@mpi.nl">tianai.dong@mpi.nl</a>
+        For inquiries: <a href="tianai.dong@mpi.nl">tianai.dong@mpi.nl</a>
+      </p>
+      <p>
+        Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>
       </p>
     </div>
   </div>
