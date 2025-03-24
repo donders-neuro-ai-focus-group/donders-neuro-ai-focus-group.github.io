@@ -1,12 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <!-- Head content remains the same -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Donders Neuro-AI Focus Group</title>
+  <title>Thank You - Donders Neuro-AI Focus Group</title>
   <meta name="author" content="Donders Institute">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSS styles remain the same -->
   <style>
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -17,7 +15,6 @@
       line-height: 1.6;
     }
     
-    /* Other styles remain the same */
     a {
       color: #0366d6;
       text-decoration: none;
@@ -33,6 +30,12 @@
       margin-right: auto;
       margin-left: auto;
       padding: 20px;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
     
     .header {
@@ -40,79 +43,53 @@
       margin-bottom: 30px;
       padding-bottom: 20px;
       border-bottom: 1px solid #eaecef;
+      width: 100%;
     }
     
-    .nav {
-      display: flex;
-      justify-content: center;
+    .thank-you-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      margin: 20px 0;
+      max-width: 600px;
+      width: 100%;
+    }
+    
+    .thank-you-icon {
+      color: #28a745;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    
+    .thank-you-title {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #28a745;
+    }
+    
+    .thank-you-message {
+      font-size: 18px;
       margin-bottom: 30px;
     }
     
-    .nav a {
-      margin: 0 15px;
-      font-weight: 500;
-    }
-    
-    .section {
-      margin-bottom: 40px;
-    }
-    
-    .heading {
-      font-size: 24px;
-      font-weight: 600;
-      border-bottom: 1px solid #eaecef;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-    
-    .news-item, .schedule-item {
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #eaecef;
-    }
-    
-    .news-date, .schedule-date {
-      color: #6a737d;
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-    
-    .news-title, .schedule-title {
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-    
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-    
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    
-    button {
+    .button {
       background-color: #0366d6;
       color: white;
       border: none;
-      padding: 12px 20px;
+      padding: 12px 24px;
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
       font-weight: 500;
+      display: inline-block;
+      margin-top: 20px;
     }
     
-    button:hover {
+    .button:hover {
       background-color: #0256b9;
+      text-decoration: none;
     }
     
     .footer {
@@ -122,204 +99,31 @@
       margin-top: 50px;
       padding-top: 20px;
       border-top: 1px solid #eaecef;
-    }
-    
-    .members {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    
-    .member {
-      width: 48%;
-      margin-bottom: 25px;
-    }
-    
-    .member-name {
-      font-weight: 600;
-    }
-    
-    .member-role {
-      color: #6a737d;
-      font-size: 14px;
-    }
-    
-    /* Added styles for form success/error messages */
-    .form-message {
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 4px;
-      display: none;
-    }
-    
-    .form-success {
-      background-color: #d4edda;
-      color: #155724;
-      border: 1px solid #c3e6cb;
-    }
-    
-    .form-error {
-      background-color: #f8d7da;
-      color: #721c24;
-      border: 1px solid #f5c6cb;
-    }
-    
-    @media (max-width: 768px) {
-      .member {
-        width: 100%;
-      }
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <!-- Header and navigation remain the same -->
     <div class="header">
       <h1>Donders Neuro-AI Focus Group</h1>
       <p>Bridging neuroscience and artificial intelligence research at the Donders Institute</p>
     </div>
     
-    <div class="nav">
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#members">Members</a>
-      <a href="#signup">Sign Up</a>
-    </div>
-    
-    <!-- About section remains the same -->
-    <div id="about" class="section">
-      <div class="heading">About</div>
+    <div class="thank-you-card">
+      <div class="thank-you-icon">✓</div>
+      <div class="thank-you-title">Thank You for Signing Up!</div>
+      <div class="thank-you-message">
+        Your application has been successfully submitted to join the Neuro-AI Focus Group.
+        We've added your email to our mailing list and will keep you updated on upcoming events and activities.
+      </div>
       <p>
-        Both neuroscience and AI study how intelligent systems perceive, make decisions, communicate, and act in the world. Despite rapid developments in both fields, critical questions remain at their intersection: How can AI enhance neuroscientific inquiry, and how can neuroscience insights advance AI development? Our proposed focus group aims to bridge this gap by bringing together researchers to address these interdisciplinary challenges. We invite all Donderians—across disciplines such as neuroscience, cognitive science, machine learning, and research areas like vision, language, learning and decision-making —to participate in the focus group through regular meetings. Together, we aim to cultivate a vibrant neuro-AI local community at Donders, one that transcends institutional boundaries and fosters new research collaborations.
+        We look forward to collaborating with you on bridging neuroscience and artificial intelligence research at the Donders Institute.
       </p>
+      <a href="index.html" class="button">Return to Homepage</a>
     </div>
     
-    <!-- News section remains the same -->
-    <div id="news" class="section">
-      <div class="heading">News</div>
-      
-      <div class="news-item">
-        <div class="news-date">Feb 28, 2025</div>
-        <div class="news-title">Our focus Group has been successfully selected for a research stimulation fund!!</div>
-        <p>
-          Registration is now open!
-        </p>
-      </div>
-    </div>
-    
-    <!-- Schedule section remains the same -->
-    <div id="schedule" class="section">
-      <div class="heading">Schedule</div>
-      <div class="schedule-item">
-        <div class="schedule-date"> (Tenative) May, 2025 | Monday | MM 01.620 </div>
-        <div class="schedule-title">Kick-off Meeting</div>
-        <p>
-          Details come soon!
-        </p>
-      </div>
-    </div>
-    
-    <!-- Members section remains the same -->
-    <div id="members" class="section">
-      <div class="heading">Organizers</div>
-      
-      <div class="members">
-        <div class="member">
-        <a href="https://www.predictivebrainlab.com/people/floris-de-lange/">Floris de Lange</a>
-          <div class="member-role">PI </div>
-        </div>
-        
-        <div class="member">
-        <a href="https://www.dynac-lab.com/people">Linda Geerligs</a>
-          <div class="member-role">PI</div>
-        </div>
-        
-        <div class="member">
-        <a href="https://cls.ru.nl/~sfrank/">Stefan Frank</a>
-          <div class="member-role">PI</div>
-        </div>
-        
-        <div class="member">
-          <a href="https://www.artcogsys.com/team/marcel/">Marcel van Gerven</a>
-          <div class="member-role">PI</div>
-        </div>
-        
-        <div class="member">
-          <a href="https://thirzadado.com//">Thirza Dado</a>
-          <div class="member-role">Postdoc</div>
-        </div>
-        
-        <div class="member">
-          <a href="https://tianaidong.github.io/">Dota Tianai Dong</a>
-          <div class="member-role">PhD Student</div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Updated sign-up section with email functionality -->
-    <div id="signup" class="section">
-      <div class="heading">Sign Up for the Focus Group</div>
-      
-      <p>
-        Interested in joining our Neuro-AI Focus Group? Fill out the form below to express your interest and receive the latest updates. We welcome researchers from the Donders Institute and affiliated institutions.
-      </p>
-      
-      <!-- Success and error messages -->
-      <div id="formSuccess" class="form-message form-success">
-        Thank you for your interest! Your application has been submitted successfully.
-      </div>
-      <div id="formError" class="form-message form-error">
-        There was an error submitting your application. Please try again later or contact us directly.
-      </div>
-      
-      <!-- Updated form with action and method attributes -->
-        <form action="https://formsubmit.co/tianai.dong@mpi.nl" method="POST" />
-        <!-- Hidden fields for FormSubmit configuration -->
-        <input type="hidden" name="_subject" value="New Neuro-AI Focus Group Signup">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
-        
-        <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="position">Position *</label>
-          <select id="position" name="position" required>
-            <option value="">Select your position</option>
-            <option value="faculty">Faculty Member</option>
-            <option value="postdoc">Postdoctoral Researcher</option>
-            <option value="phd">PhD Student</option>
-            <option value="master">Master's Student</option>
-            <option value="staff">Staff</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="department">Department/Institute *</label>
-          <input type="text" id="department" name="department" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="suggestions">Suggestions for Activities or Topics</label>
-          <textarea id="suggestions" name="suggestions" rows="4"></textarea>
-        </div>
-        
-        <button type="submit">Submit Application</button>
-      </form>
-    </div>
-    
-    <!-- Footer remains the same -->
     <div class="footer">
       <p>
         Donders Institute for Brain, Cognition and Behaviour<br>
@@ -329,27 +133,7 @@
       <p>
         For inquiries: <a href="mailto:tianai.dong@mpi.nl">tianai.dong@mpi.nl</a>
       </p>
-      <p>
-        Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>
-      </p>
     </div>
   </div>
-
-  <!-- JavaScript for form handling -->
-  <script>
-    document.getElementById('signupForm').addEventListener('submit', function(event) {
-      // The form will be handled by FormSubmit.co
-      // This JavaScript is just for additional validation if needed
-      
-      // You could add custom validation here if needed
-      
-      // For example, to display a success message before redirecting
-      // event.preventDefault();
-      // document.getElementById('formSuccess').style.display = 'block';
-      // setTimeout(() => {
-      //   this.submit();
-      // }, 2000);
-    });
-  </script>
 </body>
 </html>
