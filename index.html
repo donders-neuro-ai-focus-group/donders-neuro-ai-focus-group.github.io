@@ -141,6 +141,17 @@
       font-size: 14px;
     }
     
+    /* Success message styling */
+    .success-message {
+      display: none;
+      color: #28a745;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    
     @media (max-width: 768px) {
       .member {
         width: 100%;
@@ -237,20 +248,34 @@
         Interested in joining our Neuro-AI Focus Group? Fill out the form below to express your interest. We welcome researchers, students, and staff from the Donders Institute and affiliated institutions.
       </p>
       
-      <form>
+      <!-- Success message that will be shown after form submission -->
+      <div id="success-message" class="success-message">
+        Thank you for your interest in the Neuro-AI Focus Group! Your application has been received, and we'll be in touch soon.
+      </div>
+      
+      <!-- Netlify Form -->
+      <form name="neuro-ai-signup" method="POST" data-netlify="true" action="/thank-you" netlify-honeypot="bot-field">
+        <!-- Hidden field to prevent spam -->
+        <p style="display: none;">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        
+        <!-- Hidden field for Netlify Forms -->
+        <input type="hidden" name="form-name" value="neuro-ai-signup" />
+        
         <div class="form-group">
           <label for="name">Full Name *</label>
-          <input type="text" id="name" required>
+          <input type="text" id="name" name="name" required>
         </div>
         
         <div class="form-group">
           <label for="email">Email Address *</label>
-          <input type="email" id="email" required>
+          <input type="email" id="email" name="email" required>
         </div>
         
         <div class="form-group">
           <label for="position">Position *</label>
-          <select id="position" required>
+          <select id="position" name="position" required>
             <option value="">Select your position</option>
             <option value="faculty">Faculty Member</option>
             <option value="postdoc">Postdoctoral Researcher</option>
@@ -263,13 +288,12 @@
         
         <div class="form-group">
           <label for="department">Department/Institute *</label>
-          <input type="text" id="department" required>
+          <input type="text" id="department" name="department" required>
         </div>
-        
         
         <div class="form-group">
           <label for="suggestions">Suggestions for Activities or Topics</label>
-          <textarea id="suggestions" rows="4"></textarea>
+          <textarea id="suggestions" name="suggestions" rows="4"></textarea>
         </div>
         
         <button type="submit">Submit Application</button>
@@ -283,12 +307,24 @@
         Nijmegen, The Netherlands
       </p>
       <p>
-        For inquiries: <a href="tianai.dong@mpi.nl">tianai.dong@mpi.nl</a>
+        For inquiries: <a href="mailto:tianai.dong@mpi.nl">tianai.dong@mpi.nl</a>
       </p>
       <p>
         Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>
       </p>
     </div>
   </div>
+
+  <!-- JavaScript for handling form submission -->
+  <script>
+    // Check if the URL contains a success parameter
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.includes('success=true')) {
+        document.getElementById('success-message').style.display = 'block';
+        // Scroll to the message
+        document.getElementById('success-message').scrollIntoView();
+      }
+    });
+  </script>
 </body>
 </html>
