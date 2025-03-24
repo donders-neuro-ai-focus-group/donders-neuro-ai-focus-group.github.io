@@ -255,14 +255,23 @@
       </div>
       
       <!-- Netlify Form -->
-      <form name="neuro-ai-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="signup-form">
+      <!-- This is a static form pre-render for Netlify to detect -->
+      <form name="neuro-ai-signup" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <select name="position"></select>
+        <input type="text" name="department" />
+        <textarea name="suggestions"></textarea>
+      </form>
+      
+      <!-- Actual form that users will interact with -->
+      <form name="neuro-ai-signup" method="POST" id="signup-form">
+        <input type="hidden" name="form-name" value="neuro-ai-signup" />
+        
         <!-- Hidden field to prevent spam -->
         <p style="display: none;">
           <label>Don't fill this out if you're human: <input name="bot-field" /></label>
         </p>
-        
-        <!-- Hidden field for Netlify Forms -->
-        <input type="hidden" name="form-name" value="neuro-ai-signup" />
         
         <div class="form-group">
           <label for="name">Full Name *</label>
@@ -319,28 +328,20 @@
   <!-- JavaScript for handling form submission -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Handle form submission
+      // Get form reference
       const form = document.getElementById('signup-form');
       
-      form.addEventListener('submit', function(event) {
-        // Let Netlify handle the form submission
-        // This script just manages UI feedback without redirecting
+      // Handle form submission
+      form.addEventListener('submit', function(e) {
+        // Let the form submit normally - Netlify will handle it
         
-        // Show success message after the form is processed by Netlify
-        // This happens after the automatic Netlify page reload
-        if (window.location.search.includes('success=true') || 
-            window.location.search.includes('submission-ok')) {
-          showSuccessMessage();
-        }
+        // After successful submission, Netlify might redirect back with a query parameter
+        // The script below checks for that and displays success message
       });
       
-      // Check URL for success parameters when page loads
-      if (window.location.search.includes('success=true') || 
-          window.location.search.includes('submission-ok')) {
-        showSuccessMessage();
-      }
-      
-      function showSuccessMessage() {
+      // Check if this is a redirect back from Netlify form submission
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('form-name')) {
         // Show success message
         document.getElementById('success-message').style.display = 'block';
         
