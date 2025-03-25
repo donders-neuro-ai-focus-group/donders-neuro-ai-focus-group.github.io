@@ -277,27 +277,5 @@
       </p>
     </div>
   </div>
-
-  <!-- JavaScript for handling form submission -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get form reference
-      const form = document.getElementById('signup-form');
-      
-      // Check if we're coming back from a successful form submission
-      if (window.location.search.includes('success=true')) {
-        // Show success message
-        document.getElementById('success-message').style.display = 'block';
-        
-        // Scroll to success message
-        document.getElementById('success-message').scrollIntoView({
-          behavior: 'smooth'
-        });
-        
-        // Clear form
-        form.reset();
-      }
-    });
-  </script>
 </body>
 </html>
