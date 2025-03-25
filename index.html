@@ -244,69 +244,18 @@
     
     <div id="signup" class="section">
       <div class="heading">Sign Up for the Focus Group</div>
-      
+      <form name="contact" netlify>
       <p>
-        Interested in joining our Neuro-AI Focus Group? Fill out the form below to express your interest. We welcome researchers, students, and staff from the Donders Institute and affiliated institutions.
+        <label>Name <input type="text" name="name" /></label>
       </p>
-      
-      <!-- Success message that will be shown after form submission -->
-      <div id="success-message" class="success-message">
-        Thank you for your interest in the Neuro-AI Focus Group! Your application has been received, and we'll be in touch soon.
-      </div>
-      
-      <!-- Static form pre-render for Netlify to detect -->
-      <form name="neuro-ai-signup" data-netlify="true" netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <select name="position"></select>
-        <input type="text" name="department" />
-        <textarea name="suggestions"></textarea>
-      </form>
-      
-      <!-- Actual form that users will interact with -->
-      <form name="neuro-ai-signup" method="POST" data-netlify="true" id="signup-form">
-        <input type="hidden" name="form-name" value="neuro-ai-signup" />
-        
-        <!-- Hidden field to prevent spam -->
-        <p style="display: none;">
-          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-        </p>
-        
-        <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="position">Position *</label>
-          <select id="position" name="position" required>
-            <option value="">Select your position</option>
-            <option value="faculty">Faculty Member</option>
-            <option value="postdoc">Postdoctoral Researcher</option>
-            <option value="phd">PhD Student</option>
-            <option value="master">Master's Student</option>
-            <option value="staff">Staff</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="department">Department/Institute *</label>
-          <input type="text" id="department" name="department" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="suggestions">Suggestions for Activities or Topics</label>
-          <textarea id="suggestions" name="suggestions" rows="4"></textarea>
-        </div>
-        
-        <button type="submit">Submit Application</button>
-      </form>
+      <p>
+        <label>Email <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+
     </div>
     
     <div class="footer">
