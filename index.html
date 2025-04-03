@@ -165,6 +165,33 @@
       border: none;
     }
     
+    /* Highlight for kick-off program */
+    .highlight-program {
+      background-color: #f0f7ff;
+      border-left: 4px solid #0366d6;
+      padding: 15px;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    /* Schedule program details */
+    .schedule-details {
+      margin-left: 15px;
+      margin-top: 10px;
+      padding-left: 15px;
+      border-left: 2px solid #eaecef;
+    }
+    
+    .schedule-time {
+      font-weight: 500;
+      color: #0366d6;
+    }
+    
+    .schedule-speaker {
+      font-style: italic;
+      color: #24292e;
+    }
+    
     @media (max-width: 768px) {
       .member {
         width: 100%;
@@ -213,22 +240,26 @@
     
     <div id="schedule" class="section">
       <div class="heading">Schedule</div>
-      <div class="schedule-item">
-        <div class="schedule-date"> June 16 14:00-16:00, 2025 | Monday | MM 01.620 </div>
+      
+      <div class="schedule-item highlight-program">
+        <div class="schedule-date">June 16 14:00-16:00, 2025 | Monday | MM 01.620</div>
         <div class="schedule-title">Kick-off Meeting</div>
+        <div class="schedule-details">
+          <p><span class="schedule-time">14:00 - 14:05</span> — Welcome and Introduction<br>
+          <p><span class="schedule-time">14:15 - 14:50</span> — PI pitches<br>
+          <p><span class="schedule-time">15:00 - 16:00</span> — Mini-poster session<br>        
+        </div>
       </div>
+      
       <div class="schedule-item">
-        <div class="schedule-date"> Sep 8 14:00-16:00, 2025 | Monday | MM 01.620 </div>
+        <div class="schedule-date">Sep 8 14:00-16:00, 2025 | Monday | MM 01.620</div>
         <div class="schedule-title">September Meeting</div>
       </div>
+      
       <div class="schedule-item">
-      <div class="schedule-date"> November 10 14:00-16:00, 2025 | Monday | MM 01.620 </div>
-      <div class="schedule-title">November Meeting</div>
+        <div class="schedule-date">November 10 14:00-16:00, 2025 | Monday | MM 01.620</div>
+        <div class="schedule-title">November Meeting</div>
       </div>
-
-    
-    
-    
     </div>
     
     <div id="members" class="section">
