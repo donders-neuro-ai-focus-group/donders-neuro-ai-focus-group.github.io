@@ -192,6 +192,24 @@
       color: #24292e;
     }
     
+    .speaker-abstract {
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .speaker-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .abstract-text {
+      font-size: 14px;
+      color: #6a737d;
+      line-height: 1.5;
+      text-align: justify;
+    }
+    
     @media (max-width: 768px) {
       .member {
         width: 100%;
@@ -259,6 +277,21 @@
   <div class="schedule-title">September Meeting</div>
   <div class="schedule-details">
     <p><span class="schedule-time">14:00–14:45</span> — Two pitches: Using AI as a Tool for Neuroscientific Inquiry</p>
+    
+    <div class="speaker-abstract">
+      <div class="speaker-title">Micha Heilbron - "Generative AI as a tool to study the predictive brain"</div>
+      <div class="abstract-text">
+        Advances in AI are providing new ways to study cognition. I will argue that this will have a profound impact on the cognitive sciences, comparable to the impact of cognitive neuroscience in prior decades. I will illustrate this by focusing on one domain, the use of generative AI as a tool to study the predictive brain. I will showcase it specifically with some new results applying this approach to vision, using data from mouse electrophysiology and human 7T fMRI. Results reveal higher-level spatial prediction in mouse cortex, and a hierarchy of predictions in human cortex. Together, the studies reveal the computational nature and ubiquity of prediction in the brain – and illustrate the power of AI to transform the way we do cognitive (neuro)science.
+      </div>
+    </div>
+    
+    <div class="speaker-abstract">
+      <div class="speaker-title">Thirza Dado - "Neural coding with AI-synthesized reality"</div>
+      <div class="abstract-text">
+        Understanding how the brain represents visual information requires tools that can bridge the gap between external stimuli and internal neural representations thereof. Here, we integrated generative adversarial networks (GANs) into the neural coding pipeline, leveraging their generative latents as computational proxies for neural activity associated with visual perception. These latents are "generative" in that they can be passed through a generator network to synthesize their corresponding images, just like neural representations are also directly related to the perceived external phenomena. This generative property enabled both encoding (predicting neural responses) and decoding (reconstructing stimuli from brain activity). The latter resulted in state-of-the-art reconstructions that closely resembled the perceived images, indicating a shared representational structure between GANs and visual cortex, even though GANs were never optimized on neural data. Taken together, GANs do not just generate the outward appearance of visual stimuli; their internal latent representations also share similarities to those the brain uses to make sense of visual information, repurposing them as powerful tools for neuroscientific inquiry.
+      </div>
+    </div>
+    
     <p><span class="schedule-time">14:45–15:00</span> — Coffee Break</p>
     <p><span class="schedule-time">15:00–16:00</span> — CCN Roundtable</p>
   </div>
