@@ -79,93 +79,6 @@
       margin-bottom: 5px;
     }
     
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-    
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    
-    button {
-      background-color: #0366d6;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 500;
-    }
-    
-    button:hover {
-      background-color: #0256b9;
-    }
-    
-    .footer {
-      text-align: center;
-      color: #6a737d;
-      font-size: 14px;
-      margin-top: 50px;
-      padding-top: 20px;
-      border-top: 1px solid #eaecef;
-    }
-    
-    .members {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    
-    .member {
-      width: 48%;
-      margin-bottom: 25px;
-    }
-    
-    .member-name {
-      font-weight: 600;
-    }
-    
-    .member-role {
-      color: #6a737d;
-      font-size: 14px;
-    }
-    
-    /* Success message styling */
-    .success-message {
-      display: none;
-      color: #28a745;
-      background-color: #d4edda;
-      border: 1px solid #c3e6cb;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 4px;
-      text-align: center;
-    }
-    
-    /* Google Form iframe styling */
-    .google-form-container {
-      width: 100%;
-      overflow: hidden;
-    }
-    
-    .google-form-iframe {
-      width: 100%;
-      height: 700px;
-      border: none;
-    }
-    
-    /* Highlight for kick-off program */
     .highlight-program {
       background-color: #f0f7ff;
       border-left: 4px solid #0366d6;
@@ -173,8 +86,7 @@
       border-radius: 4px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-    
-    /* Schedule program details */
+
     .schedule-details {
       margin-left: 15px;
       margin-top: 10px;
@@ -209,23 +121,13 @@
       line-height: 1.5;
       text-align: justify;
     }
-    
-    @media (max-width: 768px) {
-      .member {
-        width: 100%;
-      }
-      
-      .google-form-iframe {
-        height: 800px; /* Slightly taller on mobile */
-      }
-    }
-    .logo {
-    display: block;
-    margin: 0 auto 10px auto; /* center it and give spacing below */
-    max-width: 33%; /* one-third of container width */
-    height: auto;
-  }
 
+    .logo {
+      display: block;
+      margin: 0 auto 10px auto;
+      max-width: 33%;
+      height: auto;
+    }
   </style>
 </head>
 
@@ -254,13 +156,10 @@
     
     <div id="news" class="section">
       <div class="heading">News</div>
-      
       <div class="news-item">
         <div class="news-date">Feb 28, 2025</div>
-        <div class="news-title">Our focus Group has been successfully selected for a research stimulation fund!!</div>
-        <p>
-          Registration is now open!
-        </p>
+        <div class="news-title">Our focus group has been successfully selected for a research stimulation fund!</div>
+        <p>Registration is now open!</p>
       </div>
     </div>
     
@@ -268,70 +167,49 @@
       <div class="heading">Schedule</div>
       
       <div class="schedule-item">
-        <div class="schedule-date">June 16 14:00-16:00, 2025 | Monday | MM 01.620</div>
+        <div class="schedule-date">June 16 14:00–16:00, 2025 | Monday | MM 01.620</div>
         <div class="schedule-title">Kick-off Meeting</div>
       </div>
-      
-<div class="schedule-item highlight-program">
-  <div class="schedule-date">Sep 8, 2025 | 14:00–16:00 | Monday | MM 01.620</div>
-  <div class="schedule-title">September Meeting</div>
-  <div class="schedule-details">
-    <p><span class="schedule-time">14:00–14:45</span> — Two pitches: Using AI as a Tool for Neuroscientific Inquiry</p>
-    
-    <div class="speaker-abstract">
-      <div class="speaker-title">Micha Heilbron - "Generative AI as a tool to study the predictive brain"</div>
-      <div class="abstract-text">
-        Advances in AI are providing new ways to study cognition. I will argue that this will have a profound impact on the cognitive sciences, comparable to the impact of cognitive neuroscience in prior decades. I will illustrate this by focusing on one domain, the use of generative AI as a tool to study the predictive brain. I will showcase it specifically with some new results applying this approach to vision, using data from mouse electrophysiology and human 7T fMRI. Results reveal higher-level spatial prediction in mouse cortex, and a hierarchy of predictions in human cortex. Together, the studies reveal the computational nature and ubiquity of prediction in the brain – and illustrate the power of AI to transform the way we do cognitive (neuro)science.
-      </div>
-    </div>
-    
-    <div class="speaker-abstract">
-      <div class="speaker-title">Thirza Dado - "Neural coding with AI-synthesized reality"</div>
-      <div class="abstract-text">
-        Understanding how the brain represents visual information requires tools that can bridge the gap between external stimuli and internal neural representations thereof. Here, we integrated generative adversarial networks (GANs) into the neural coding pipeline, leveraging their generative latents as computational proxies for neural activity associated with visual perception. These latents are "generative" in that they can be passed through a generator network to synthesize their corresponding images, just like neural representations are also directly related to the perceived external phenomena. This generative property enabled both encoding (predicting neural responses) and decoding (reconstructing stimuli from brain activity). The latter resulted in state-of-the-art reconstructions that closely resembled the perceived images, indicating a shared representational structure between GANs and visual cortex, even though GANs were never optimized on neural data. Taken together, GANs do not just generate the outward appearance of visual stimuli; their internal latent representations also share similarities to those the brain uses to make sense of visual information, repurposing them as powerful tools for neuroscientific inquiry.
-      </div>
-    </div>
-    
-    <p><span class="schedule-time">14:45–15:00</span> — Coffee Break</p>
-    <p><span class="schedule-time">15:00–16:00</span> — CCN Roundtable</p>
-  </div>
-</div>
 
-      <div class="schedule-item">
-        <div class="schedule-date">November 10 14:00-16:00, 2025 | Monday | MM 01.620</div>
-        <div class="schedule-title">November Meeting</div>
+      <div class="schedule-item highlight-program">
+        <div class="schedule-date">Nov 10, 2025 | 14:00–16:00 | Monday | MM 01.620</div>
+        <div class="schedule-title">November Meeting — “AI as a Model Organism”</div>
+        <div class="schedule-details">
+          <p><span class="schedule-time">14:00–14:45</span> — Talk by <strong>Steven Scholte (UvA)</strong>: <em>“Fantastic DNimals and Where to Find Them”</em></p>
+          <div class="speaker-abstract">
+            <div class="abstract-text">
+              In this talk, Steven Scholte will discuss how artificial models can serve as model organisms for studying the brain, highlighting opportunities and challenges in aligning AI and biological systems. Join us for an engaging discussion on how different models can help us understand neural computation.
+            </div>
+          </div>
+          <p><span class="schedule-time">14:45–15:00</span> — Coffee Break</p>
+          <p><span class="schedule-time">15:00–16:00</span> — Group Discussion & Networking (with cookies and coffee)</p>
+        </div>
       </div>
     </div>
     
     <div id="members" class="section">
       <div class="heading">Organizers</div>
-      
       <div class="members">
         <div class="member">
-        <a href="https://www.predictivebrainlab.com/people/floris-de-lange/">Floris de Lange</a>
-          <div class="member-role">PI </div>
-        </div>
-        
-        <div class="member">
-        <a href="https://www.dynac-lab.com/people">Linda Geerligs</a>
+          <a href="https://www.predictivebrainlab.com/people/floris-de-lange/">Floris de Lange</a>
           <div class="member-role">PI</div>
         </div>
-        
         <div class="member">
-        <a href="https://cls.ru.nl/~sfrank/">Stefan Frank</a>
+          <a href="https://www.dynac-lab.com/people">Linda Geerligs</a>
           <div class="member-role">PI</div>
         </div>
-        
+        <div class="member">
+          <a href="https://cls.ru.nl/~sfrank/">Stefan Frank</a>
+          <div class="member-role">PI</div>
+        </div>
         <div class="member">
           <a href="https://www.artcogsys.com/team/marcel/">Marcel van Gerven</a>
           <div class="member-role">PI</div>
         </div>
-        
         <div class="member">
-          <a href="https://thirzadado.com//">Thirza Dado</a>
+          <a href="https://thirzadado.com/">Thirza Dado</a>
           <div class="member-role">Postdoc</div>
         </div>
-        
         <div class="member">
           <a href="https://tianaidong.github.io/">Dota Tianai Dong</a>
           <div class="member-role">PhD Student</div>
@@ -339,24 +217,17 @@
       </div>
     </div>
     
-<div id="signup" class="section">
-  <div class="heading">Sign Up for the Focus Group</div>
-  <div class="google-form-container">
-    <iframe class="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScAIoSi6FX6Qb5NP3uzlF5vDVAhdd3SHRf0rSKXNfF8mFlABA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </div>
-</div>
+    <div id="signup" class="section">
+      <div class="heading">Sign Up for the Focus Group</div>
+      <div class="google-form-container">
+        <iframe class="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScAIoSi6FX6Qb5NP3uzlF5vDVAhdd3SHRf0rSKXNfF8mFlABA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+    
     <div class="footer">
-      <p>
-        Donders Institute for Brain, Cognition and Behaviour<br>
-        Radboud University<br>
-        Nijmegen, The Netherlands
-      </p>
-      <p>
-        For inquiries: <a href="mailto:tianai.dong@mpi.nl">tianai.dong@mpi.nl</a>
-      </p>
-      <p>
-        Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>
-      </p>
+      <p>Donders Institute for Brain, Cognition and Behaviour<br>Radboud University<br>Nijmegen, The Netherlands</p>
+      <p>For inquiries: <a href="mailto:tianai.dong@mpi.nl">tianai.dong@mpi.nl</a></p>
+      <p>Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a></p>
     </div>
   </div>
 </body>
