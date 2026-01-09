@@ -122,12 +122,20 @@
       text-align: justify;
     }
 
-    .logo {
-      display: block;
-      margin: 0 auto 10px auto;
-      max-width: 33%;
-      height: auto;
-    }
+  .logo {
+    display: block;
+    margin: 0 auto 10px auto;
+    max-width: 160px;   /* desktop size */
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 600px) {
+  .logo {
+    max-width: 120px;
+  }
+
+
   </style>
 </head>
 
