@@ -6,153 +6,265 @@
   <meta name="author" content="Donders Institute">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background-color: #f8f9fa;
-      line-height: 1.6;
-    }
-    
-    a {
-      color: #0366d6;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-    }
-    
-    .container {
-      width: 100%;
-      max-width: 900px;
-      margin-right: auto;
-      margin-left: auto;
-      padding: 20px;
-    }
-    
-    .header {
-      text-align: center;
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #eaecef;
-    }
-    
-    .nav {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    
-    .nav a {
-      margin: 0 15px;
-      font-weight: 500;
-    }
-    
-    .section {
-      margin-bottom: 40px;
-    }
-    
-    .heading {
-      font-size: 24px;
-      font-weight: 600;
-      border-bottom: 1px solid #eaecef;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-    
-    .news-item, .schedule-item {
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #eaecef;
-    }
-    
-    .news-date, .schedule-date {
-      color: #6a737d;
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-    
-    .news-title, .schedule-title {
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-    
-    .highlight-program {
-      background-color: #f0f7ff;
-      border-left: 4px solid #0366d6;
-      padding: 15px;
-      border-radius: 4px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+  }
+  
+  .header {
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f4f7fb 100%
+    );
+    border-bottom: 1px solid #eaecef;
+    margin-bottom: 40px;
+  }
 
-    .schedule-details {
-      margin-left: 15px;
-      margin-top: 10px;
-      padding-left: 15px;
-      border-left: 2px solid #eaecef;
-    }
-    
-    .schedule-time {
-      font-weight: 500;
-      color: #0366d6;
-    }
-    
-    .schedule-speaker {
-      font-style: italic;
-      color: #24292e;
-    }
-    
-    .speaker-abstract {
-      margin-left: 20px;
-      margin-top: 10px;
-      margin-bottom: 15px;
-    }
-    
-    .speaker-title {
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-    
-    .abstract-text {
-      font-size: 14px;
-      color: #6a737d;
-      line-height: 1.5;
-      text-align: justify;
-    }
+  .header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    text-align: left;
+  }
 
   .logo {
-    display: block;
-    margin: 0 auto 10px auto;
-    max-width: 160px;   /* desktop size */
-    width: 100%;
+    max-width: 80px;
     height: auto;
+    opacity: 1;
+    flex-shrink: 0;
   }
+
+  .header-text {
+    text-align: left;
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 0 0 6px 0;
+    padding-left: 4px;
+  }
+
+  .header-text p {
+    font-size: 16px;
+    color: #57606a;
+    margin: 0;
+    max-width: 600px;
+  }
+
+  .title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .nav a {
+    margin: 0 15px;
+    font-weight: 500;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+    overflow-anchor: none;
+  }
+
+  
+  .heading {
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .news-item, .schedule-item {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eaecef;
+  }
+  
+  .news-date, .schedule-date {
+    color: #6a737d;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .news-title, .schedule-title {
+    /* font-weight: 600; */
+    margin-bottom: 5px;
+  }
+  
+  .highlight-program {
+    background-color: #f0f7ff;
+    border-left: 4px solid #0366d6;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+
+  .schedule-details {
+    margin-left: 15px;
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: 2px solid #eaecef;
+  }
+  
+  .schedule-time {
+    font-weight: 500;
+    color: #0366d6;
+  }
+  
+  .schedule-speaker {
+    font-style: italic;
+    color: #24292e;
+  }
+  
+  .speaker-abstract {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .speaker-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .abstract-text {
+    font-size: 14px;
+    color: #6a737d;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .members {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 10px;
+  }
+
+  .member {
+    font-size: 18px;
+  }
+
+  .member-role {
+    color: #6a737d;
+    font-size: 16px;
+  }
+
+ .subheading {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+    color: #24292e;
+  }
+
+  .schedule-summary {
+    all: unset;
+    cursor: pointer;
+    display: block; 
+    width: 100%;
+    font-weight: 500;
+  }
+
+  .schedule-summary::before {
+    content: "▸";
+    display: inline-block;
+    margin-right: 6px;
+    transition: transform 0.2s ease;
+  }
+
+  .schedule-summary[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+  }
+
+  .schedule-details {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .schedule-summary[aria-expanded="true"] + .schedule-details {
+    display: block;
+  }
+
 
   @media (max-width: 600px) {
-  .logo {
-    max-width: 120px;
+    .header-inner {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+    .logo {
+      max-width: 56px;
+    }
+    .header-text h1 {
+      font-size: 24px;
+    }
+    .members {
+      grid-template-columns: 1fr;
+    }
   }
 
-
-  </style>
+</style>
 </head>
 
 <body>
+
   <div class="container">
-    <div class="header">
-      <img src="neuroai-logo_.png" alt="NeuroAI Logo" class="logo">
-      <h1>Donders Neuro-AI Focus Group</h1>
-      <p>Bridging neuroscience and artificial intelligence research at the Donders Institute</p>
+    <div class="header-inner">
+      <div class="header-text">
+        <h1>Donders Neuro-AI Focus Group</h1>
+        <p>Bridging neuroscience and AI research at the Donders Institute</p>
+      </div>
+
+      <img src="neuroai-logo_.png"
+          alt="NeuroAI Logo"
+          class="logo">
     </div>
+
     
     <div class="nav">
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#members">Organizers</a>
-      <a href="#signup">Sign Up</a>
+      <a href="#" data-target="about">About</a>
+      <a href="#" data-target="news">News</a>
+      <a href="#" data-target="schedule">Schedule</a>
+      <a href="#" data-target="members">Organizers</a>
+      <a href="#" data-target="signup">Join</a>
     </div>
     
     <div id="about" class="section">
@@ -164,79 +276,184 @@
     
     <div id="news" class="section">
       <div class="heading">News</div>
+
       <div class="news-item">
-        <div class="news-date">Feb 28, 2025</div>
-        <div class="news-title">Our focus group has been successfully selected for a research stimulation fund!</div>
-        <p>Registration is now open!</p>
+        <div class="news-title">
+          <span class="news-date">Jan 2026</span> — Research Stimulation Funds awarded again for 2026! 🎉
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">
+          <span class="news-date">Nov 2025</span> — Our Neuro-AI Focus Group was featured in the
+          <a href="https://www.ru.nl/en/donders-institute/news/donders-research-stimulation-funds-call-for-new-collaborations-and-focus-groups"
+            target="_blank">Donders News</a>!
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">
+          <span class="news-date">Feb 2025</span> — Research Stimulation Funds awarded for 2025! 🎉
+        </div>
       </div>
     </div>
     
     <div id="schedule" class="section">
       <div class="heading">Schedule</div>
       
-      <div class="schedule-item">
-        <div class="schedule-date">June 16 14:00–16:00, 2025 | Monday | MM 01.620</div>
-        <div class="schedule-title">Kick-off Meeting</div>
+      <div class="schedule-item highlight-program">
+      <button class="schedule-summary" aria-expanded="true" tabindex="-1">
+        <span class="schedule-date">Nov 10, 2025 | 14:00–16:00</span> —
+        <span class="schedule-title">AI as a Model Organism</span>
+      </button>
+
+      <div class="schedule-details">
+        <p><span class="schedule-time">14:00–14:45</span> — Talk by <strong>Steven Scholte (UvA)</strong>:
+          <em>“Fantastic DNimals and Where to Find Them”</em></p>
+        <div class="speaker-abstract">
+          <div class="abstract-text">
+            Artificial models as model organisms for studying the brain, and what alignment between AI and biology can teach us about neural computation.
+          </div>
+        </div>
+        <p><span class="schedule-time">14:45–15:00</span> — Coffee break</p>
+        <p><span class="schedule-time">15:00–16:00</span> — Group discussion & networking</p>
+      </div>
+    </div>
+
+    <div class="schedule-item">
+      <button class="schedule-summary" aria-expanded="false" tabindex="-1">
+        <span class="schedule-date">Sep 8, 2025 | 14:00–16:00</span> —
+        <span class="schedule-title">AI as a Tool for Neuroscientific Inquiry</span>
+      </button>
+
+      <div class="schedule-details">
+        <p><span class="schedule-time">14:00–14:45</span> — Two research pitches</p>
+
+        <div class="speaker-abstract">
+          <div class="speaker-title">Micha Heilbron</div>
+          <div class="abstract-text">
+            Generative AI for studying the predictive brain using mouse electrophysiology and human 7T fMRI.
+          </div>
+        </div>
+
+        <div class="speaker-abstract">
+          <div class="speaker-title">Thirza Dado</div>
+          <div class="abstract-text">
+            Neural coding with AI-synthesized reality using GAN-based latent representations.
+          </div>
+        </div>
+
+        <p><span class="schedule-time">14:45–15:00</span> — Coffee break</p>
+        <p><span class="schedule-time">15:00–16:00</span> — CCN roundtable</p>
+      </div>
+    </div>
+
+    <div class="schedule-item">
+      <button class="schedule-summary" aria-expanded="false" tabindex="-1">
+        <span class="schedule-date">June 16, 2025 | 14:00–16:00</span> —
+        <span class="schedule-title">Kick-off Meeting</span>
+      </button>
+
+      <div class="schedule-details">
+        <p><span class="schedule-time">14:00–14:05</span> — Welcome and introduction</p>
+        <p><span class="schedule-time">14:05–14:50</span> — PI pitches</p>
+        <p><span class="schedule-time">14:50–15:00</span> — Coffee & cookies</p>
+        <p><span class="schedule-time">15:00–16:00</span> — Mini-poster session</p>
+
+        <p class="schedule-speaker">
+          Bring an A4 page to introduce your work — all career stages welcome.
+        </p>
+      </div>
+    </div>
+    </div>
+
+    <div id="members" class="section">
+    <div class="heading">Organizers</div>
+    <div class="members">
+      <div class="member">
+        <a href="https://www.predictivebrainlab.com/people/floris-de-lange/">Floris de Lange</a>
+        <span class="member-role"> — PI</span>
       </div>
 
-      <div class="schedule-item highlight-program">
-        <div class="schedule-date">Nov 10, 2025 | 14:00–16:00 | Monday | MM 01.620</div>
-        <div class="schedule-title">November Meeting — “AI as a Model Organism”</div>
-        <div class="schedule-details">
-          <p><span class="schedule-time">14:00–14:45</span> — Talk by <strong>Steven Scholte (UvA)</strong>: <em>“Fantastic DNimals and Where to Find Them”</em></p>
-          <div class="speaker-abstract">
-            <div class="abstract-text">
-              In this talk, Steven Scholte will discuss how artificial models can serve as model organisms for studying the brain, highlighting opportunities and challenges in aligning AI and biological systems. Join us for an engaging discussion on how different models can help us understand neural computation.
-            </div>
-          </div>
-          <p><span class="schedule-time">14:45–15:00</span> — Coffee Break</p>
-          <p><span class="schedule-time">15:00–16:00</span> — Group Discussion & Networking (with cookies and coffee)</p>
-        </div>
+      <div class="member">
+        <a href="https://www.dynac-lab.com/people">Linda Geerligs</a>
+        <span class="member-role"> — PI</span>
       </div>
-    </div>
-    
-    <div id="members" class="section">
-      <div class="heading">Organizers</div>
-      <div class="members">
-        <div class="member">
-          <a href="https://www.predictivebrainlab.com/people/floris-de-lange/">Floris de Lange</a>
-          <div class="member-role">PI</div>
-        </div>
-        <div class="member">
-          <a href="https://www.dynac-lab.com/people">Linda Geerligs</a>
-          <div class="member-role">PI</div>
-        </div>
-        <div class="member">
-          <a href="https://cls.ru.nl/~sfrank/">Stefan Frank</a>
-          <div class="member-role">PI</div>
-        </div>
-        <div class="member">
-          <a href="https://www.artcogsys.com/team/marcel/">Marcel van Gerven</a>
-          <div class="member-role">PI</div>
-        </div>
-        <div class="member">
-          <a href="https://thirzadado.com/">Thirza Dado</a>
-          <div class="member-role">Postdoc</div>
-        </div>
-        <div class="member">
-          <a href="https://tianaidong.github.io/">Dota Tianai Dong</a>
-          <div class="member-role">PhD Student</div>
-        </div>
+
+      <div class="member">
+        <a href="https://cls.ru.nl/~sfrank/">Stefan Frank</a>
+        <span class="member-role"> — PI</span>
       </div>
-    </div>
-    
-    <div id="signup" class="section">
-      <div class="heading">Sign Up for the Focus Group</div>
-      <div class="google-form-container">
-        <iframe class="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScAIoSi6FX6Qb5NP3uzlF5vDVAhdd3SHRf0rSKXNfF8mFlABA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+      <div class="member">
+        <a href="https://www.artcogsys.com/team/marcel/">Marcel van Gerven</a>
+        <span class="member-role"> — PI</span>
       </div>
-    </div>
-    
-    <div class="footer">
-      <p>Donders Institute for Brain, Cognition and Behaviour<br>Radboud University<br>Nijmegen, The Netherlands</p>
-      <p>For inquiries: <a href="mailto:tianai.dong@mpi.nl">tianai.dong@mpi.nl</a></p>
-      <p>Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a></p>
+
+      <div class="member">
+        <a href="https://thirzadado.com/">Thirza Dado</a>
+        <span class="member-role"> — Postdoc</span>
+      </div>
+
+      <div class="member">
+        <a href="https://tianaidong.github.io/">Dota Tianai Dong</a>
+        <span class="member-role"> — PhD Student</span>
+      </div>
     </div>
   </div>
+
+    
+  <div id="signup" class="section">
+    <div class="heading">Sign up for the Focus Group</div>
+    <div class="google-form-container">
+      <iframe
+        class="google-form-iframe"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScAIoSi6FX6Qb5NP3uzlF5vDVAhdd3SHRf0rSKXNfF8mFlABA/viewform?embedded=true"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+    
+  <div class="footer">
+    <p>Donders Institute for Brain, Cognition and Behaviour<br>Radboud University<br>Nijmegen, The Netherlands</p>
+    <p>For questions: <a href="mailto:tianai.dong@mpi.nl">tianai.dong@mpi.nl</a>, <a href="mailto:thirza.dado@donders.ru.nl">thirza.dado@donders.ru.nl</a></p>
+    <p>Template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a></p>
+
+  </div>
+<script>
+  // disable browser scroll restoration
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // always start at top on reload
+  window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+  });
+
+  // manual navigation scrolling
+  document.querySelectorAll('.nav a[data-target]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const id = link.dataset.target;
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+</script>
+
+
 </body>
+
+
+
 </html>
