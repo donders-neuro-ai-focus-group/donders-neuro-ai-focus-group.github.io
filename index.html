@@ -424,6 +424,14 @@
 
   </div>
 <script>
+    // schedule accordion toggle
+  document.querySelectorAll('.schedule-summary').forEach(button => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!expanded));
+    });
+  });
+
   // disable browser scroll restoration
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
